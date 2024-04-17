@@ -1,7 +1,13 @@
+import { WithUseMemo } from "../WithUseMemo";
+import { WithoutUseMemo } from "../WithoutUseMemo";
+
 export const HookUseMemo = () => {
   return (
     <>
-      {/* Contenu de votre composant */}
+      <h1>useMemo</h1>
+        <WithoutUseMemo/>
+        <WithUseMemo/>
     </>
   );
 }
+

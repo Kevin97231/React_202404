@@ -13,6 +13,7 @@ import { LifeCycle } from "./components/view/LifeCycle";
 import { HookUseEffect } from "./components/view/HookUseEffect";
 import { RequestHttp } from "./components/view/RequestHttp";
 import { HookUseMemo } from "./components/view/HookUseMemo";
+import { CustomHook } from "./components/view/CustomHook";
 
 function App() {
   return(
@@ -31,6 +32,7 @@ function App() {
               <Route path="use-effect" element={<HookUseEffect/>}/>
               <Route path="request-api" element={<RequestHttp/>}/>
               <Route path="use-memo" element={<HookUseMemo/>}/>
+              <Route path="custom-hook" element={<CustomHook/>}/>
             </Routes>
           </BrowserRouter>
         </div>

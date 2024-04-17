@@ -49,6 +49,9 @@ function Navbar() {
                 <a href="/use-memo">useMemo</a>
               </li>
               <li>
+                <a href="/custom-hook">Hook personnalisé</a>
+              </li>
+              <li>
                 <a href="/exercice">Exercice</a>
               </li>
             </ul>
@@ -80,6 +83,9 @@ function Navbar() {
               </li>
               <li>
                 <a href="/use-memo">useMemo</a>
+              </li>
+              <li>
+                <a href="/custom-hook">Hook personnalisé</a>
               </li>
             <li>
               <a href="/exercice">Exercice</a>
