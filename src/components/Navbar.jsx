@@ -46,6 +46,9 @@ function Navbar() {
                 <a href="/request-api">Requêtes API</a>
               </li>
               <li>
+                <a href="/use-memo">useMemo</a>
+              </li>
+              <li>
                 <a href="/exercice">Exercice</a>
               </li>
             </ul>
@@ -74,6 +77,9 @@ function Navbar() {
               </li>
               <li>
                 <a href="/request-api">Requêtes API</a>
+              </li>
+              <li>
+                <a href="/use-memo">useMemo</a>
               </li>
             <li>
               <a href="/exercice">Exercice</a>

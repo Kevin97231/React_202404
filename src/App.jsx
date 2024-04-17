@@ -12,6 +12,7 @@ import { Exercice } from "./components/view/Exercice";
 import { LifeCycle } from "./components/view/LifeCycle";
 import { HookUseEffect } from "./components/view/HookUseEffect";
 import { RequestHttp } from "./components/view/RequestHttp";
+import { HookUseMemo } from "./components/view/HookUseMemo";
 
 function App() {
   return(
@@ -29,6 +30,7 @@ function App() {
               <Route path='/life-cycle' element={<LifeCycle/>}/>
               <Route path="use-effect" element={<HookUseEffect/>}/>
               <Route path="request-api" element={<RequestHttp/>}/>
+              <Route path="use-memo" element={<HookUseMemo/>}/>
             </Routes>
           </BrowserRouter>
         </div>
