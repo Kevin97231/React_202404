@@ -1,3 +1,5 @@
+import { Correction } from "../exerciceFruits/Correction";
+
 export const Exercice = () => {
     
     return (
@@ -32,6 +34,7 @@ export const Exercice = () => {
                 `}
             </pre>
 
+            <Correction/>    
 
     </>
   );
