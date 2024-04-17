@@ -28,13 +28,22 @@ function Navbar() {
                 <a href="/=">Accueil</a>
               </li>
               <li>
-                <a href="/use-state">Use State</a>
+                <a href="/use-state">useState</a>
               </li>
               <li>
                 <a href="/flux">Flux</a>
               </li>
               <li>
                 <a href="/formulaire">Formulaire</a>
+              </li>
+              <li>
+                <a href="/life-cycle">cyle de vie</a>
+              </li>
+              <li>
+                <a href="/use-effect">useEffect</a>
+              </li>
+              <li>
+                <a href="/request-api">Requêtes API</a>
               </li>
               <li>
                 <a href="/exercice">Exercice</a>
@@ -49,7 +58,7 @@ function Navbar() {
               <a href="/=">Accueil</a>
             </li>
             <li>
-              <a href="/use-state">Use State</a>
+              <a href="/use-state">useState</a>
             </li>
             <li>
               <a href="/flux">Flux</a>
@@ -57,6 +66,15 @@ function Navbar() {
             <li>
               <a href="/formulaire">Formulaire</a>
             </li>
+            <li>
+              <a href="/life-cycle">Cyle de vie</a>
+            </li>
+            <li>
+                <a href="/use-effect">useEffect</a>
+              </li>
+              <li>
+                <a href="/request-api">Requêtes API</a>
+              </li>
             <li>
               <a href="/exercice">Exercice</a>
             </li>

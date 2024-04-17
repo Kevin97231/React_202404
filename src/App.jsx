@@ -9,6 +9,9 @@ import { HookUseState } from "./components/HookUseState";
 import { Flux } from "./components/view/Flux";
 import { Formulaire } from "./components/view/Formulaire";
 import { Exercice } from "./components/view/Exercice";
+import { LifeCycle } from "./components/view/LifeCycle";
+import { HookUseEffect } from "./components/view/HookUseEffect";
+import { RequestHttp } from "./components/view/RequestHttp";
 
 function App() {
   return(
@@ -23,6 +26,9 @@ function App() {
               <Route path='/flux' element={<Flux/>}/>
               <Route path='/formulaire' element={<Formulaire/>}/>
               <Route path='/exercice' element={<Exercice/>}/>
+              <Route path='/life-cycle' element={<LifeCycle/>}/>
+              <Route path="use-effect" element={<HookUseEffect/>}/>
+              <Route path="request-api" element={<RequestHttp/>}/>
             </Routes>
           </BrowserRouter>
         </div>
