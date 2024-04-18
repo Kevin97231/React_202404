@@ -14,6 +14,7 @@ import { HookUseEffect } from "./components/view/HookUseEffect";
 import { RequestHttp } from "./components/view/RequestHttp";
 import { HookUseMemo } from "./components/view/HookUseMemo";
 import { CustomHook } from "./components/view/CustomHook";
+import { ExerciceRequestWithCustomHook } from "./components/view/ExerciceRequestWithCustomHook";
 
 function App() {
   return(
@@ -33,6 +34,7 @@ function App() {
               <Route path="request-api" element={<RequestHttp/>}/>
               <Route path="use-memo" element={<HookUseMemo/>}/>
               <Route path="custom-hook" element={<CustomHook/>}/>
+              <Route path="exercice-custom-hook-api" element={<ExerciceRequestWithCustomHook/>}/>
             </Routes>
           </BrowserRouter>
         </div>
