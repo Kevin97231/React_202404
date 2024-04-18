@@ -5,7 +5,7 @@ import { Table } from "../ExerciceAPI/Table";
 
 export const ExerciceRequestWithCustomHook = () => {
   
-  const { get, remove } = useAxios();
+  const { get, remove, put } = useAxios();
   const [products, setProducts] = useState([])
 
   useEffect(() => {
@@ -26,10 +26,21 @@ export const ExerciceRequestWithCustomHook = () => {
       .catch(error => console.error("Error removing product:", error));
   };
 
+  const updateProduct = (id, data) => { 
+    put(id, data)
+      .then( (response) => {
+        setProducts(prevProducts => 
+          prevProducts.map(productMap => 
+            productMap.id === response.id ? {...response} : productMap
+          )
+        )
+      })
+  }
+
     return (
     <>
      <Consigne/>
-     <Table data={products} remove={handleRemoveProduct}/>
+     <Table data={products} remove={handleRemoveProduct} update={updateProduct}/>
     </>
   );
 }

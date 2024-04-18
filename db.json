@@ -8,17 +8,17 @@
       "id": "6"
     },
     {
-      "name": "Testtt",
-      "price": "8",
-      "number": "15",
-      "category": "",
+      "name": "Poire",
+      "price": "1",
+      "number": "1000",
+      "category": "Fruits",
       "id": "66d2"
     },
     {
-      "name": "Zucchiniiijojoj",
+      "name": "Pomme",
       "price": "5",
       "number": "6",
-      "category": "",
+      "category": "Fruits",
       "id": "f774"
     },
     {
