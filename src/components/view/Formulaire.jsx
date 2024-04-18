@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 /* eslint-disable react/no-unescaped-entities */
 export const Formulaire = () => {
@@ -9,9 +11,26 @@ export const Formulaire = () => {
     setName(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit2 = (e) => {
     e.preventDefault();
     console.log(new FormData(e.target))
+  }
+
+// _______________Formulaire avec vérif_______________
+
+
+  const { register, handleSubmit, formState: {errors} } = useForm();
+
+  const submitWithVerif = (data) => {
+    // console.log('REGISTER -> ',register("password", {
+    //   required: "mot de passe requis",
+    //   pattern: {
+    //     value:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-/:;,.]).{8,}$/,
+    //     message: "Le mot de passe doit contenir au moins une minuscule, une majuscule, un chiifre et un caractère spécial"
+    // }
+    // }))
+
+    console.log("Formulaire envoyé !", data)
   }
 
   return (
@@ -38,7 +57,7 @@ export const Formulaire = () => {
       </div>
 
       <h2>Les formulaires 'classiques'</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit2}>
         <input
           name="login"
           type="text"
@@ -53,6 +72,45 @@ export const Formulaire = () => {
         <button className="btn">Envoyer</button>
 
       </form>
+
+      <h2>FOrmulaire avec Vérif (utilisation de react-hook-form)</h2>
+      <form onSubmit={handleSubmit(submitWithVerif)}>
+
+        <input 
+          type = "email"
+          className="input m-2 input-bordered"
+          {
+            ...register("login", {
+              // required: true
+              required: "login requis",
+              // pattern: {
+              //   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+              //   message: "Adresse mail invalide"
+              // }
+            })
+          }
+        />
+        { errors.login && <p className="text-red-500 text-sm">{errors.login.message}</p> }
+
+        <input
+          type="password"
+          className="input m-2 input-bordered"
+          {
+            ...register("password", {
+              required: "mot de passe requis",
+              pattern: {
+                value:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-/:;,.]).{8,}$/,
+                message: "Le mot de passe doit contenir au moins une minuscule, une majuscule, un chiifre et un caractère spécial"
+            }
+            })
+          }
+        />
+        { errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p> }
+
+        <button type="submit" className="btn">Se connecter</button>
+      </form>
+
+
     </>
   );
 };
